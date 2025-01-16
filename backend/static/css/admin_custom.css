@@ -1,0 +1,343 @@
+/* Custom CSS for Django Admin Panel */
+
+/* General background and text colors for the entire page */
+body {
+  background-color: white !important; /* White background for readability */
+  color: black !important; /* Dark gray text for contrast */
+}
+div .breadcrumbs {
+  background-color: #16a34a !important; /* Green background for breadcrumbs */
+  color: white !important; /* White text for breadcrumbs */
+}
+.module,
+.grp-module,
+.grp-group,
+.grp-row,
+.grp-table,
+.grp-changelist-results,
+.grp-changelist-results tbody tr,
+.grp-changelist-results tbody tr th,
+.grp-changelist-results tbody tr td {
+  background-color: white !important; /* White background for readability */
+  color: white !important; /* Dark gray text for contrast */
+}
+
+/* Header and navigation bar styling */
+#header,
+#branding,
+#user-tools,
+.grp-header {
+  background-color: #16a34a !important; /* Green background to match theme */
+  color: white !important; /* White text for visibility */
+}
+
+/* Additional headers */
+#grp-header,
+#grp-footer {
+  background-color: #16a34a !important; /* Green background to match theme */
+  color: white !important; /* White text for visibility */
+}
+
+/* Sidebar and module headers */
+.module h2 {
+  background-color: #16a34a !important; /* Green background for header */
+  color: white !important; /* White text for readability */
+  padding: 10px;
+  font-size: 16px; /* Consistent font size for headers */
+  font-weight: bold; /* Bold text for emphasis */
+}
+
+.grp-module h2 {
+  background-color: #16a34a !important; /* Green background for header */
+  color: white !important; /* White text for readability */
+  padding: 10px;
+  font-size: 16px; /* Consistent font size for headers */
+  font-weight: bold; /* Bold text for emphasis */
+}
+
+.app-api h2,
+.app-auth h2 {
+  background-color: #16a34a !important; /* Green background for header */
+  color: white !important; /* White text for readability */
+  padding: 10px;
+  font-size: 16px; /* Consistent font size for headers */
+  font-weight: bold; /* Bold text for emphasis */
+}
+
+/* Buttons and links styling */
+a {
+  /* Green background for links */
+  color: white !important; /* White text for contrast */
+  border-color: #16a34a !important; /* Green border to match theme */
+}
+.grp-button,
+.grp-button-primary {
+  background-color: #16a34a !important; /* Green background for buttons */
+  color: white !important; /* White text for contrast */
+  border-color: #16a34a !important; /* Green border to match theme */
+}
+
+.model-notes {
+  background-color: white !important;
+}
+
+.model-notes a,
+.model-groups a,
+.model-users a {
+  background-color: #16a34a !important; /* Green background for buttons and links */
+  color: white !important; /* White text for contrast */
+  border-color: #16a34a !important; /* Green border to match theme */
+}
+
+/* Form elements styling */
+input,
+select,
+textarea,
+.grp-form-row {
+  background-color: white !important; /* White background for inputs */
+  color: black !important; /* Dark gray text */
+}
+
+/* Table rows styling */
+
+.grp-changelist-results tbody tr:hover {
+  background-color: #e6f4e6 !important; /* Light green for row hover effects */
+}
+
+/* Footer styling */
+footer {
+  background-color: #16a34a !important; /* Green background for footer */
+  color: white !important; /* White text for footer */
+}
+
+/* Targeting theme icons */
+.theme-icon-when-auto,
+.theme-icon-when-dark,
+.theme-icon-when-light {
+  color: #16a34a !important; /* Green color for theme icons */
+}
+
+/* Section headers within specific modules */
+.app-api h2,
+.app-auth h2 {
+  background-color: #16a34a !important; /* Green background for section headers */
+  color: white !important; /* White text for section headers */
+  padding: 10px;
+  font-size: 16px; /* Consistent font size */
+  font-weight: bold; /* Bold text for emphasis */
+}
+
+/* Items within the sections */
+.model-notes {
+  background-color: white !important; /* White background for items */
+  color: #16a34a !important; /* Dark gray text */
+  padding: 10px;
+  margin-bottom: 10px; /* Spacing between items */
+}
+.model-groups {
+  background-color: white !important; /* White background for items */
+  color: transparent !important; /* Dark gray text */
+  border: 1px solid #16a34a !important; /* Green border to match theme */
+  padding: 10px;
+  margin-bottom: 10px; /* Spacing between items */
+}
+.model-users {
+  background-color: white !important; /* White background for items */
+  color: transparent !important; /* Dark gray text */
+  border: 1px solid #16a34a !important; /* Green border to match theme */
+  padding: 10px;
+  margin-bottom: 10px; /* Spacing between items */
+}
+
+/* Styling for buttons within the items */
+.model-notes a {
+  background-color: #16a34a !important; /* Green background for buttons */
+  color: white !important; /* White text for buttons */
+  border: none; /* No border for buttons */
+  padding: 5px 10px; /* Padding for buttons */
+  margin-left: 5px; /* Margin between buttons */
+  cursor: pointer; /* Pointer cursor for buttons */
+  font-size: 14px; /* Font size for buttons */
+  text-decoration: none; /* Remove underline from links */
+}
+.model-groups a {
+  background-color: #16a34a !important; /* Green background for buttons */
+  color: white !important; /* White text for buttons */
+  border: none; /* No border for buttons */
+  padding: 5px 10px; /* Padding for buttons */
+  margin-left: 5px; /* Margin between buttons */
+  cursor: pointer; /* Pointer cursor for buttons */
+  font-size: 14px; /* Font size for buttons */
+  text-decoration: none; /* Remove underline from links */
+}
+.model-users a {
+  background-color: #16a34a !important; /* Green background for buttons */
+  color: white !important; /* White text for buttons */
+  border: none; /* No border for buttons */
+  padding: 5px 10px; /* Padding for buttons */
+  margin-left: 5px; /* Margin between buttons */
+  cursor: pointer; /* Pointer cursor for buttons */
+  font-size: 14px; /* Font size for buttons */
+  text-decoration: none; /* Remove underline from links */
+}
+
+/* Targeting the caption element within tables */
+.app-api .module table caption {
+  background-color: #16a34a !important; /* Green background for the caption */
+  color: white !important; /* White text for the caption */
+}
+
+/* Targeting the link within the caption */
+.app-api .module table caption a {
+  color: white !important; /* White color for the link */
+}
+.toggle-nav-sidebar {
+  background-color: var(--hairline-color) !important;
+  color: #16a34a;
+  border-right: 1px solid var(--hairline-color);
+}
+.submit-row {
+  background-color: transparent !important;
+  border: none !important;
+}
+.button,
+input[type="submit"],
+input[type="button"],
+.submit-row input,
+a.button {
+  color: white !important;
+  background-color: #16a34a !important;
+}
+
+label {
+  color: black !important;
+}
+#nav-filter {
+  background-color: black !important;
+  outline: none;
+}
+/* General table styling */
+table {
+  width: 100%;
+  border-collapse: collapse; /* Remove gaps between table cells */
+  background-color: white !important; /* White background for the table */
+  color: white !important; /* Dark gray text for contrast */
+}
+
+/* Table headers */
+table thead th {
+  background-color: #16a34a !important; /* Green background for headers */
+  color: white !important; /* White text for headers */
+  padding: 10px; /* Padding for header cells */
+  text-align: left; /* Align text to the left */
+  font-weight: bold; /* Bold text for emphasis */
+}
+
+/* Table rows and cells */
+table tbody tr {
+  border-bottom: 1px solid #ccc !important; /* Light gray border between rows */
+}
+
+table tbody td {
+  padding: 10px; /* Padding for table cells */
+  vertical-align: middle; /* Center align text vertically */
+}
+
+/* Table captions */
+table caption {
+  background-color: #16a34a !important; /* Green background for captions */
+  color: white !important; /* White text for captions */
+  padding: 10px; /* Padding for captions */
+  text-align: center; /* Center align the caption text */
+  font-weight: bold; /* Bold text for emphasis */
+}
+
+/* Table links */
+table a {
+  color: white !important; /* Green text for links */
+  text-decoration: underline; /* Underline links for visibility */
+  background-color: transparent !important;
+}
+#changelist .actions {
+  background-color: transparent !important;
+}
+#nav-sidebar .current-model {
+  background-color: black !important;
+}
+.object-tools .addlink {
+  background-color: #16a34a !important;
+}
+#toolbar {
+  background-color: transparent !important;
+  border: none;
+}
+#toolbar form input[type="submit"],
+#changelist .actions .button {
+  background-color: #16a34a !important;
+  color: white !important;
+  border: none !important;
+}
+input[type="radio"] {
+  appearance: none; /* Removes the default style */
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+}
+
+/* Change the inner circle when checked */
+input[type="radio"]:checked {
+  border-color: #16a34a;
+}
+
+input[type="radio"]:checked::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background-color: #16a34a;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.selector ul.selector-chooser {
+  background-color: none !important;
+}
+
+.login label {
+  color: black;
+}
+
+@media (prefers-color-scheme: dark) {
+  .login label {
+    color: white !important;
+  }
+}
+
+/* Responsive tables */
+@media (max-width: 768px) {
+  table {
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+
+  table caption {
+    font-size: 16px; /* Slightly larger text for captions */
+  }
+
+  table thead th,
+  table tbody td {
+    padding: 8px; /* Reduce padding for smaller screens */
+  }
+}
+
+a {
+  background-color: transparent !important;
+}
+
+.model-users .addlink {
+  background-color: var(--body-bg) !important;
+}
