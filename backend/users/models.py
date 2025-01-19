@@ -18,6 +18,9 @@ class User(AbstractUser):
     bvn = models.CharField(max_length=11, null=True, blank=True, unique=True)
     cac_document = models.ImageField(upload_to='cac_documents/', null=True, blank=True)
 
+    # Lender-specific fields
+    balance = models.DecimalField(max_digits=10, decimal_places=2, default=0, null=True, blank=True)
+
     def is_accessible(self):
         if self.user_type == 'founder' and not self.is_approved:
             return False

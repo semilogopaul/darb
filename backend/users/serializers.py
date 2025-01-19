@@ -7,7 +7,8 @@ class UserRegistrationSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = ['username', 'first_name', 'last_name', 'email', 'password', 
-                  'bank_name', 'account_number', 'user_type', 'bvn', 'cac_document']
+                  'bank_name', 'account_number', 'user_type', 'bvn', 'cac_document' 'balance']
+        read_only_fields = ['balance']
 
     def create(self, validated_data):
         user = User.objects.create(
