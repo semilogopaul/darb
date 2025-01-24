@@ -4,6 +4,7 @@ from rest_framework import status
 from .utils import initialize_payment, verify_payment
 from campaigns.models import Campaign
 from django.shortcuts import get_object_or_404
+from decimal import Decimal
 
 class InitializePaymentView(APIView):
     def post(self, request, *args, **kwargs):
@@ -12,7 +13,7 @@ class InitializePaymentView(APIView):
 
         campaign = get_object_or_404(Campaign, id=campaign_id)
 
-        if amount > campaign.remaining_goal():
+        if amount > (campaign.goal_amount-campaign.current_amount):
             return Response({"error": "Amount exceeds campaign goal"}, status=status.HTTP_400_BAD_REQUEST)
 
         email = request.user.email  # Assuming user authentication is handled
@@ -31,7 +32,11 @@ class VerifyPaymentView(APIView):
                 # Process successful payment
                 # Example: Update campaign funds
                 campaign = get_object_or_404(Campaign, id=request.query_params.get("campaign_id"))
-                campaign.current_amount += payment_data["data"]["amount"] / 100  # Convert from kobo to Naira
+                
+                # Convert amount from kobo (integer) to Naira (Decimal)
+                amount_paid = Decimal(payment_data["data"]["amount"]) / 100  # Convert to Decimal
+                
+                campaign.current_amount += amount_paid
                 campaign.save()
 
                 return Response({"message": "Payment verified successfully"}, status=status.HTTP_200_OK)
