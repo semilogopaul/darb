@@ -13,6 +13,18 @@ class LoanCreateView(generics.CreateAPIView):
     permission_classes = [permissions.IsAuthenticated]
 
 class RepaymentCreateView(generics.CreateAPIView):
-    queryset = Repayment.objects.all()
     serializer_class = RepaymentSerializer
-    permission_classes = [permissions.IsAuthenticated]
+
+    def get_serializer_context(self):
+        # Pass the campaign object into the serializer's context
+        campaign_id = self.request.data.get('campaign_id')
+        campaign = Campaign.objects.get(id=campaign_id)
+        return {'campaign': campaign}
+
+    def perform_create(self, serializer):
+        serializer.save()
+
+
+class CampaignProgressView(generics.RetrieveAPIView):
+    queryset = Campaign.objects.all()
+    serializer_class = CampaignSerializer

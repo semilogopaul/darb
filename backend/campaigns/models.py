@@ -22,13 +22,21 @@ class Campaign(models.Model):
     def calculate_total_repayment(self):
         """Calculate the total repayment amount including interest."""
         interest = (self.goal_amount * self.interest_rate) / 100
-        return self.goal_amount + interest
+        return Decimal(self.goal_amount) + Decimal(interest)
 
     def remaining_repayment(self):
         """Calculate the remaining repayment amount."""
         total_repayment = self.calculate_total_repayment()
         repaid_amount = sum([repayment.amount for repayment in self.repayments.all()])
-        return total_repayment - repaid_amount
+        return total_repayment - Decimal(repaid_amount)
+
+    def repayment_progress(self):
+        """Calculate the percentage of repayment completed."""
+        total_repayment = self.calculate_total_repayment()
+        repaid_amount = sum([repayment.amount for repayment in self.repayments.all()])
+        if total_repayment == 0:
+            return 0
+        return (Decimal(repaid_amount) / total_repayment) * 100
 
     def is_fully_repaid(self):
         """Check if the campaign has been fully repaid."""
