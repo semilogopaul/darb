@@ -1,0 +1,58 @@
+# General
+__pycache__/
+*.py[cod]
+*.swp
+.DS_Store
+.env
+.env.*
+*.log
+*.sqlite3
+
+# Virtual Environment
+venv/
+.env/
+
+# Django
+*.pyc
+*.pyo
+/media/
+/staticfiles/
+/db.sqlite3
+celerybeat-schedule
+
+# MySQL Credentials
+mysql.cnf
+
+# Node.js / React
+node_modules/
+yarn.lock
+package-lock.json
+.npm/
+
+# Build / Cache
+.build/
+.cache/
+.next/
+coverage/
+dist/
+
+# VSCode / JetBrains
+.vscode/
+.idea/
+*.iml
+
+# Docker
+*.pid
+docker-compose.override.yml
+
+# Logs
+logs/
+*.log
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Others
+*.pem
+*.crt
+*.key
